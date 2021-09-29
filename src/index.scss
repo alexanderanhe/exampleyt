@@ -1,0 +1,30 @@
+:root {
+  --header-height: 0rem; // 1.5rem;
+  --footer-height: 0rem; // 2rem;
+}
+:root[data-theme="clasic"] {
+  --footer-background: #1f7acc;
+  --footer-font-family: AndaleMono, monospace;
+}
+:root[data-theme="monitor"] {
+  --footer-background: rgba(0, 0, 0, 0.3);
+  --footer-font-family: Inconsolata, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+#root {
+  
+  width: 100%;
+  height: calc(100vh - var(--header-height) - var(--footer-height));
+  @media (max-width: 425px) {
+    & {
+      padding-bottom: calc(100vh/2 - var(--header-height) - var(--footer-height));
+    }
+  }
+}

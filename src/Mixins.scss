@@ -1,0 +1,153 @@
+$breakpoint-xs: 400px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1075px;
+$breakpoint-xxl: 1200px;
+
+:root[data-theme="clasic"] {
+  --font-family: AndaleMono, monospace;
+  --font-size: .9em;
+  --primary-color: #1ff042;
+  --sencondary-color: gray;
+  --info-color: yellow;
+  --warning-color: yellow;
+  --error-color: red;
+  --prompt-margin: 0.8em;
+  
+  --background-color: #000;
+  --background-image: none;
+  --background-selection: #0080ff;
+  --primary-text-shadow: 0 0 2px rgba(31, 240, 66, 0.75);
+  --primary-text-color: var(--primary-color);
+  --error-text-color: var(--error-color);
+  --secondary-text-shadow: var(--primary-text-shadow);
+  --secondary-text-color: var(--sencondary-color);
+  --terminal-background-color: #000;
+}
+
+:root[data-theme="monitor"] {
+  --font-family: Inconsolata, monospace;
+  --font-size: 1.1rem;
+  --primary-color: #fff;
+  --sencondary-color: #22481b;
+  --info-color: yellow;
+  --warning-color: yellow;
+  --error-color: red;
+  --prompt-margin: var(--font-size);
+
+  --background-color: #000;
+  --background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+  --background-selection: #0080ff;
+  --primary-text-shadow: 0 0 5px #c8c8c8;
+  --primary-text-color: var(--primary-color);
+  --error-text-color: var(--error-color);
+  --secondary-text-shadow: 0 0 2px #c8c8c8;
+  --secondary-text-color: var(--sencondary-color);
+  --terminal-background-color: #000;
+}
+
+@mixin primary-text() {
+  color: var(--primary-text-color);
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--font-size);
+  letter-spacing: .15em;
+  white-space: pre-wrap;
+  line-height: 1;
+  text-shadow: var(--primary-text-shadow);
+}
+
+@-webkit-keyframes cursor-blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@-moz-keyframes cursor-blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes cursor-blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes run {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: calc(-0.9 * 100vw);
+  }
+  100% {
+    left: 0;    
+  }
+}
+@-moz-keyframes run {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: calc(-0.9 * 100vw);
+  }
+  100% {
+    left: 0;    
+  }
+}
+@keyframes run {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: calc(-0.9 * 100vw);
+  }
+  100% {
+    left: 0;    
+  }
+}
+
+@-webkit-keyframes loader-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes loader-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
